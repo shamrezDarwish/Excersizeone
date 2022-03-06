@@ -1,29 +1,23 @@
 Feature: Visit a page and click on a link 
 
 Background: 
-	Given I go to url https://www.bbc.co.uk/ 
+	Given I go to url http://www.smartclient.com/smartgwt/showcase/#featured_tile_filtering
 	
-	
+@test
 Scenario: Visit a page and check the page title 
 	Then I check page title 
 	
-Scenario: login to BBC 
-	When I can log in with the following 'sham1@gmail.com' and 'Sham@2022' 
-	Then I am logged in 
-	
-@test
-Scenario: navigate to weather page 
-	When I can log in with the following 'sham1@gmail.com' and 'Sham@2022' 
-	Then I am logged in 
-	And I can navigate to the weather page 
-	And I can search for the weather in 'Newcastle-upon-tyne' 
 
 	
-		
-Scenario: navigate to weather page 
-	When I can log in with the following 'sham1@gmail.com' and 'Sham@2022' 
-	Then I am logged in 
-	And I can navigate to the weather page 
+
+Scenario: navigate to Search
+	When User Click on Animal 
+	And  User fill out form with letter A
+	And User select 40 for Max life span 
+	And user can select Life Span 
+	And User should Select checkbox  to Ascending
+	Then User should click on filter 
+	
 	 
 
 
